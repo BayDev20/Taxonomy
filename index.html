@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Breed Taxonomy Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Dog Breed Taxonomy Dashboard</h1>
+    </header>
+    <div class="taxonomy-card">
+        <h2>Taxonomy Classification in AI:</h2>
+        <p>
+            Taxonomy classification is a fundamental concept in artificial intelligence and data science, used to organize and categorize information into structured hierarchies. In AI, it involves creating a systematic arrangement of data based on shared characteristics, relationships, or predefined criteria. This hierarchical structure enables efficient data retrieval, facilitates machine learning algorithms in pattern recognition, and supports natural language processing tasks. Taxonomies in AI can range from simple parent-child relationships to complex multi-level hierarchies, allowing for nuanced categorization of diverse datasets. By providing a standardized framework for data organization, taxonomy classification enhances the ability of AI systems to process, analyze, and derive insights from large volumes of information across various domains.
+        </p>
+    </div>
+    <main class="dashboard">
+        <section class="breed-categories">
+            <div id="working-dogs" class="category-section">
+                <h2>Working Dogs</h2>
+                <div class="breed-grid">
+                    <button onclick="showFrame('siberian-husky')">Siberian Husky</button>
+                    <button onclick="showFrame('rottweiler')">Rottweiler</button>
+                    <button onclick="showFrame('doberman')">Doberman</button>
+                </div>
+            </div>
+            <div id="sporting-dogs" class="category-section">
+                <h2>Sporting Dogs</h2>
+                <div class="breed-grid">
+                    <button onclick="showFrame('golden-retriever')">Golden Retriever</button>
+                    <button onclick="showFrame('labrador-retriever')">Labrador</button>
+                    <button onclick="showFrame('pointer')">Pointer</button>
+                </div>
+            </div>
+            <div id="toy-dogs" class="category-section">
+                <h2>Toy Dogs</h2>
+                <div class="breed-grid">
+                    <button onclick="showFrame('pug')">Pug</button>
+                    <button onclick="showFrame('chihuahua')">Chihuahua</button>
+                    <button onclick="showFrame('pomeranian')">Pomeranian</button>
+                </div>
+            </div>
+            <div id="herding-dogs" class="category-section">
+                <h2>Herding Dogs</h2>
+                <div class="breed-grid">
+                    <button onclick="showFrame('german-shepherd')">German Shepherd</button>
+                    <button onclick="showFrame('border-collie')">Border Collie</button>
+                    <button onclick="showFrame('australian-shepherd')">Australian Shepherd</button>
+                </div>
+            </div>
+        </section>
+        <aside class="breed-info">
+            <h2>Breed Information</h2>
+            <div id="frame-info">
+                <p>Select a dog breed to view details.</p>
+            </div>
+        </aside>
+    </main>
+    
+    <div id="breed-selection-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('breed-selection-popup')">&times;</span>
+            <h3>Select a breed to compare</h3>
+            <div id="breed-selection-grid" class="breed-grid"></div>
+        </div>
+    </div>
+
+    <div id="comparison-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('comparison-popup')">&times;</span>
+            <div id="comparison-info"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
